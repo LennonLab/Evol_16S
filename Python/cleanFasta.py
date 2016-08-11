@@ -5,9 +5,9 @@ from itertools import product
 import scipy
 from scipy.stats import chisquare
 from Bio import Phylo
+from Bio import AlignIO
 
 mydir = os.path.expanduser("~/github/Evol_16S/")
-
 
 class classFASTA:
 
@@ -44,7 +44,6 @@ class classFASTA:
             and sequence'''
         return fasta_list
 
-
 def rename_fasta():
     read_FASTA = classFASTA(mydir + 'data/nmicrobiol201648-s7.txt')
     OUT = open(mydir + 'data/nmicrobiol201648-s7_clean.txt','w+')
@@ -63,51 +62,23 @@ def rename_fasta():
         if 'Eukaryota' in header:
             continue
         print>> OUT, '>' +header, '\n', x[1]
+    OUT.close()
 
-    tree = Phylo.read(mydir + 'data/nmicrobiol201648-s8.txt', 'newick')
-    for node in tree.find_clades():
-        #Don't print anything if there is no name
-        if node.name:
-            node.name = node.name.translate(None, '-.')
-            node.name  = node.name.replace(',', '_')
-            if 'CPpSL4' in node.name:
-                node.name = node.name.replace('CPpSL4','CP_pSL4')
-            if 'CPEM' in node.name:
-                node.name = node.name.replace('CPEM','CP_EM')
-            if 'CPDadabacteria' in node.name:
-                node.name = node.name.replace('CPDadabacteria','CP_Dadabacteria')
-            if 'CPOP9' in node.name:
-                node.name = node.name.replace('CPOP9','CP_OP9')
-            if 'CPRokubacteria' in node.name:
-                node.name = node.name.replace('CPRokubacteria','CP_Rokubacteria')
-            if 'CPOP8' in node.name:
-                node.name = node.name.replace('CPOP8','CP_OP8')
-            if 'CPCD12' in node.name:
-                node.name = node.name.replace('CPCD12','CP_CD12')
-            if 'CP' in node.name[:12] and 'CP_' not in node.name[:12]  :
-                node.name = node.name[:12].replace('CP', 'CP_') + node.name[12:]
-
-    #net = Phylo.to_networkx(tree)
-    Phylo.write(tree, mydir + 'data/nmicrobiol201648-s8_clean.txt', 'newick')
-
-import re
-def unAlignFasta():
-    read_FASTA = classFASTA(mydir + 'data/nmicrobiol201648-s7.txt')
-    OUT = open(mydir + 'data/nmicrobiol201648-s7_unAligned.txt','w+')
-    headers = []
-    for x in read_FASTA.readFASTA():
-        header = x[0].translate(None, '-.')
-        seq = x[1]
-        if 'Eukaryota' in header:
-            continue
-        seq = seq.replace('-', '')
-        header = header.replace(',', '_')
-        header = header.replace(':', '_')
-        header = header.replace('/', '_')
-        header = header.replace("'", '_')
-        header = header.translate(None, '!')
-        headers.append(header)
-        print>> OUT, '>' +header, '\n', seq
+def no_euks():
+    read_FASTA = classFASTA(mydir + 'data/nmicrobiol201648-s7_clean.txt')
+    OUT = open(mydir + 'data/nmicrobiol201648-s7_clean_noEuks.txt','w+')
+    seqssss = [x[1] for x in read_FASTA.readFASTA() if 'Eukaryota' not in x[0]]
+    seqs = [list(x[1]) for x in read_FASTA.readFASTA() if 'Eukaryota' not in x[0]]
+    names = [x[0] for x in read_FASTA.readFASTA() if 'Eukaryota' not in x[0]]
+    site_by_site = map(list, zip(*seqs))
+    test = [x for x in  map(list, zip(*seqs)) if all(y == '-' for y in x) == False]
+    seq_by_seq = map(list, zip(*test))
+    for x, name in enumerate(names):
+        print>> OUT, '>' +name, '\n', ''.join(seq_by_seq[x])
+    OUT.close()
 
 
-unAlignFasta()
+
+
+#rename_fasta()
+#no_euks()
