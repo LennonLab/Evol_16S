@@ -1,0 +1,2 @@
+dist.seqs(fasta=/N/dc2/projects/Lennon_Sequences/2016_Evol_16S/Combinatorics/data/randomDNA.fna, calc=nogaps, output=lt)
+cluster(phylip=/N/dc2/projects/Lennon_Sequences/2016_Evol_16S/Combinatorics/data/randomDNA.phylip.dist, method=average, cutoff=0.03)
