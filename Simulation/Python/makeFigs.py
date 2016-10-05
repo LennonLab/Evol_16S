@@ -77,5 +77,33 @@ def binomFig():
     plt.savefig(mydir + 'Simulation/figs/Binom.png', dpi=600,)
     plt.close()
 
+def plotDivergence():
+    # percent per 150 million years
+    minDiv = (0.025 / 0.03) / 150
+    maxDiv = (0.091 / 0.03) / 150
+    meanDiv = (minDiv + maxDiv) / 2
+    # 3.8 billion years / divergence per million years
+    time_steps = 3800
+    X = np.logspace(0, np.log10(time_steps), num = 1000, base=10.0)
+    y_min = np.asarray([(2**(minDiv * x)) for x in X ])
+    y_max = np.asarray([(2**(maxDiv * x)) for x in X ])
+    y_mean = np.asarray([(2**(meanDiv * x)) for x in X ])
+    fig, ax = plt.subplots()
+    ax.plot(X, y_mean, lw=2, color='black', alpha = 0.9)
+    #for k in zip(X, y_mean):
+    #    print k
+    ax.fill_between(X, y_min, y_max, facecolor='#87CEEB', alpha=0.5)
+    plt.axhline(y=1000000000000,  linestyle='dashed', color = 'darkgrey', linewidth=4)
+    ax.grid()
+    ax.set_xscale('log', basex=10)
+    ax.set_yscale('log', basey=10)
+    ax.set_xlabel('Time (millions of years)', fontsize=20)
+    ax.set_xlim([0,3800])
+    ax.set_ylabel('Species', fontsize=20)
+    fig.savefig(mydir + '/Simulation/figs/Divergence.png', \
+        bbox_inches = "tight", pad_inches = 0.4, dpi = 600)
+    plt.close()
 
-plotSubRate()
+
+
+plotDivergence()
