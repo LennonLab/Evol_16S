@@ -1,14 +1,29 @@
 from __future__ import division
 from random import choice
-import argparse
+import argparse, os
+import numpy as np
 
+mydir = os.path.expanduser('~/github/Evol_16S/')
+
+
+def subSeq(k):
+    siteRates =  np.loadtxt(open(mydir + \
+    'Tree/data/rates/siteRate.txt','rb'),delimiter=',',skiprows=1)
+    rates = siteRates[:,0]
+    probRates = [x/sum(rates) for x in rates]
+    base = 'A' * len(probRates)
+    sites = np.random.choice(len(probRates), size = k, replace=False, p=probRates)
+    print sites
+    for site in sites:
+        mut = choice('CGT')
+        new = base[:site] + mut + base[site+1:]
+        return new
 
 def String(length):
-
-       DNA=""
-       for count in range(length):
-          DNA+=choice("CGTA")
-       return DNA
+    DNA=''
+    for count in range(length):
+        DNA+=choice('CGTA')
+    return DNA
 
 def randomFASTA(n, path, length):
     OUT = open(path + '/randomDNA.fna', 'w+')
