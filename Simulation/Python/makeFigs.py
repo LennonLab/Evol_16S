@@ -26,6 +26,7 @@ def CV_KDE(oneD_array):
 def plotSeqSubRate():
     siteRates =  np.loadtxt(open(mydir + 'Tree/data/rates/siteRate.txt',"rb"),delimiter=",",skiprows=1)
     rates = siteRates[:,0]
+    print min(rates)
     x = range(1, len(rates) + 1)
     fig, ax = plt.subplots()
     plt.plot(x, rates, marker='o')
@@ -49,7 +50,8 @@ def plotSeqSubRate():
 def plotSubRate():
     siteRates =  np.loadtxt(open(mydir + 'Tree/data/rates/siteRate.txt',"rb"),delimiter=",",skiprows=1)
     rates = siteRates[:,0]
-    print len(rates)
+    rates = [x/np.mean(rates) for x in rates ]
+    #print len(rates)
     #KDE = CV_KDE(rates)
     fig, ax = plt.subplots()
     #ax.plot(KDE[0], KDE[1], linewidth=3, alpha=0.5, label='bw=%.2f' % KDE[2])
@@ -72,15 +74,15 @@ def binomFig():
         binSample = comb(N,j)*(0.25)**j*(0.75)**(N-j)
         x.append(j)
         y.append(binSample)
-        print binSample
+        #print binSample
     plt.plot(x, y, marker='o')
     plt.savefig(mydir + 'Simulation/figs/Binom.png', dpi=600,)
     plt.close()
 
 def plotDivergence():
-    # percent per 150 million years
-    minDiv = (0.025 / 0.03) / 150
-    maxDiv = (0.091 / 0.03) / 150
+    # percent per million years
+    minDiv = (0.025 / 0.03)
+    maxDiv = (0.091 / 0.03)
     meanDiv = (minDiv + maxDiv) / 2
     # 3.8 billion years / divergence per million years
     time_steps = 3800
@@ -88,6 +90,7 @@ def plotDivergence():
     y_min = np.asarray([(2**(minDiv * x)) for x in X ])
     y_max = np.asarray([(2**(maxDiv * x)) for x in X ])
     y_mean = np.asarray([(2**(meanDiv * x)) for x in X ])
+    print y_max
     fig, ax = plt.subplots()
     ax.plot(X, y_mean, lw=2, color='black', alpha = 0.9)
     #for k in zip(X, y_mean):
@@ -104,6 +107,7 @@ def plotDivergence():
         bbox_inches = "tight", pad_inches = 0.4, dpi = 600)
     plt.close()
 
+def gcContent():
+    
 
-
-plotDivergence()
+plotSeqSubRate()
