@@ -1,2 +1,0 @@
-dist.seqs(fasta=/N/dc2/projects/Lennon_Sequences/2016_Evol_16S/Simulation/data/simulation_out.fna, calc=nogaps, output=lt)
-cluster(phylip=/N/dc2/projects/Lennon_Sequences/2016_Evol_16S/Simulation/data/simulation_out.phylip.dist, method=average, cutoff=0.03)
