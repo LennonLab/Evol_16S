@@ -1,0 +1,31 @@
+
+
+WARNING: RAxML is not checking sequences for duplicate seqs and sites with missing data!
+
+
+
+This is RAxML version 8.1.3 released by Alexandros Stamatakis on August 13 2014.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+
+RAxML consensus tree computation
+
+
+RAxML was called as follows:
+
+raxmlHPC-PTHREADS -T 4 -m GTRCAT -J MRE -# 100 -z /N/dc2/projects/Lennon_Sequences/2016_Evol_16S/Evol_16S/data/tree/RAxML_bootstrap.T14 -n T18 -w /N/dc2/projects/Lennon_Sequences/2016_Evol_16S/Evol_16S/data/tree 
+
+
+
+
+Found 300 trees in File /N/dc2/projects/Lennon_Sequences/2016_Evol_16S/Evol_16S/data/tree/RAxML_bootstrap.T14
+
+RAxML extended Majority Rule consensus tree written to file: /N/dc2/projects/Lennon_Sequences/2016_Evol_16S/Evol_16S/data/tree/RAxML_MajorityRuleExtendedConsensusTree.T18

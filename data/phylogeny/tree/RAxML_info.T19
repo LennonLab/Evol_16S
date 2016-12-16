@@ -1,0 +1,122 @@
+
+
+IMPORTANT WARNING: Sequences Archaea_Aigarchaeota_candidate_division_pSL4_archaeon_SCGC_AAA471B22_Combined_Assembly_pSL4_1__pSL4 and Archaea_CP_pSL4_candidate_division_pSL4_archaeon_JGI_0000001H6_GBSA_001_118 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Archaea_Aigarchaeota_candidate_division_pSL4_archaeon_SCGC_AAA471B22_Combined_Assembly_pSL4_1__pSL4 and Archaea_CP_pSL4_candidate_division_pSL4_archaeon_SCGC_AAA471J07_GBSN_001_18 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Archaea_CP_YNPFFA_candidate_division_YNPFFA_archaeon_SCGC_AAA471B05_Combined_Assembly_YNPFFA_1__YNPFFA and Archaea_CP_YNPFFA_candidate_division_YNPFFA_archaeon_SCGC_AAA471B23_GBSN_001_5 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Archaea_CP_YNPFFA_candidate_division_YNPFFA_archaeon_SCGC_AAA471B05_Combined_Assembly_YNPFFA_1__YNPFFA and Archaea_CP_YNPFFA_candidate_division_YNPFFA_archaeon_SCGC_AAA471C03_GBSN_001_6 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Archaea_CP_YNPFFA_candidate_division_YNPFFA_archaeon_SCGC_AAA471B05_Combined_Assembly_YNPFFA_1__YNPFFA and Archaea_CP_YNPFFA_candidate_division_YNPFFA_archaeon_SCGC_AAA471O08_GBSN_001_29 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Archaea_Nanoarchaeota_candidate_division_DUSEL4_archaeon_SCGC_AAA011G17_DUSEL_001_198 and Archaea_Nanoarchaeota_candidate_division_DUSEL4_archaeon_SCGC_AAA011L22_Combined_Assembly_DUSEL4_1__DUSEL4 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Archaea_Thaumarchaeota_Thaumarchaeota_archaeon_SCGC_AB661L21 and Archaea_Thaumarchaeota_unclassified_Thaumarchaeota_Marine_Group_I_Marine_Group_I_thaumarchaeote_SCGC_AAA160J20 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Bacteria_CP_EM_19_bacterium_JGI_0000001D5_GBSA_001_115 and Bacteria_CP_EM_19_bacterium_JGI_0000054H05_GBSA_001_175 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Bacteria_CP_KSB1_candidate_division_KSB1_bacterium_SCGC_AAA252E13_SAK_001_43 and Bacteria_CP_KSB1_candidate_division_KSB1_bacterium_SCGC_AAA252F02_SAK_001_45 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Bacteria_CP_KSB1_candidate_division_KSB1_bacterium_SCGC_AAA252E13_SAK_001_43 and Bacteria_CP_KSB1_candidate_division_KSB1_bacterium_SCGC_AAA252M08_SAK_001_72 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Bacteria_CP_KSB1_candidate_division_KSB1_bacterium_SCGC_AAA252E13_SAK_001_43 and Bacteria_CP_KSB1_candidate_division_KSB1_bacterium_SCGC_AAA252N14_SAK_002_78 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Bacteria_CP_KSB1_candidate_division_KSB1_bacterium_SCGC_AAA252E13_SAK_001_43 and Bacteria_CP_KSB1_candidate_division_KSB1_bacterium_SCGC_AAA255C20_SAK_001_123 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Bacteria_CP_NKB19_bacterium_JGI_0000039J10_TAsludge_001_156 and Bacteria_CP_NKB19_candidate_division_NKB19_bacterium_JGI_0000039J10_Combined_Assembly_NKB19_1__NKB19 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Bacteria_CP_OP8_bacterium_SCGC_AAA252P19_SAK_001_93 and Bacteria_CP_OP8_candidate_division_OP8_bacterium_SCGC_AAA252A02_Combined_Assembly_OP8_1__OP8 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Bacteria_CP_OP9_candidate_division_OP9_bacterium_SCGC_AAA255G05_SAK_001_130 and Bacteria_CP_OP9_candidate_division_OP9_bacterium_SCGC_AAA255N14_SAK_001_136 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Bacteria_CP_WWE1_candidate_division_WWE1_bacterium_JGI_0000039G13_Combined_Assembly_WWE1_1__WWE1 and Bacteria_CP_WWE1_candidate_division_WWE1_bacterium_JGI_0000059L07_TAbiofilm_001_170 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Bacteria_Marine_group_A_SAR406_SAR406_cluster_bacterium_JGI_0000039D08_Combined_Assembly_SAR406_1__SAR406 and Bacteria_Marine_group_A_SAR406_SAR406_cluster_bacterium_JGI_0000039E15_TAsludge_001_150 are exactly identical
+
+IMPORTANT WARNING
+Found 17 sequences that are exactly identical to other sequences in the alignment.
+Normally they should be excluded from the analysis.
+
+An alignment file with sequence duplicates removed has already
+been printed to file /N/dc2/projects/Lennon_Sequences/2016_Evol_16S/Tree/data/alignment/nmicrobiol201648-s7_clean.txt.reduced
+
+
+This is RAxML version 8.1.3 released by Alexandros Stamatakis on August 13 2014.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+
+Alignment has 1946 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 25.84%
+
+RAxML rapid bootstrapping and subsequent ML search
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+
+Executing 1000 rapid bootstrap inferences and thereafter a thorough ML search 
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heteorgeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 1946
+Name: No Name Provided
+DataType: AA
+Substitution Matrix: LG
+Using fixed base frequencies
+
+
+
+
+RAxML was called as follows:
+
+raxmlHPC-PTHREADS -T 4 -f a -m PROTGAMMALG -p 12345 -x 12345 -# autoMRE -s /N/dc2/projects/Lennon_Sequences/2016_Evol_16S/Tree/data/alignment/nmicrobiol201648-s7_clean.txt -n T19 -w /N/dc2/projects/Lennon_Sequences/2016_Evol_16S/Tree/data/tree/ 
+
+
+
+Time for BS model parameter optimization 478.074321
+Bootstrap[0]: Time 21565.477449 seconds, bootstrap likelihood -1189067.147009, best rearrangement setting 13
+Bootstrap[1]: Time 22732.267468 seconds, bootstrap likelihood -1242158.331868, best rearrangement setting 13
+Bootstrap[2]: Time 19921.942047 seconds, bootstrap likelihood -1235398.689234, best rearrangement setting 12
+Bootstrap[3]: Time 26428.057710 seconds, bootstrap likelihood -1203425.083916, best rearrangement setting 15
+Bootstrap[4]: Time 15176.684332 seconds, bootstrap likelihood -1179888.521276, best rearrangement setting 10
+Bootstrap[5]: Time 15518.827580 seconds, bootstrap likelihood -1218698.035798, best rearrangement setting 10
+Bootstrap[6]: Time 7746.608362 seconds, bootstrap likelihood -1160388.473730, best rearrangement setting 6
+Bootstrap[7]: Time 24381.328124 seconds, bootstrap likelihood -1208371.079619, best rearrangement setting 14
+Bootstrap[8]: Time 6111.492365 seconds, bootstrap likelihood -1136642.374060, best rearrangement setting 5
+Bootstrap[9]: Time 9118.829178 seconds, bootstrap likelihood -1164043.501039, best rearrangement setting 7
+Bootstrap[10]: Time 9525.938750 seconds, bootstrap likelihood -1213155.812581, best rearrangement setting 7
+Bootstrap[11]: Time 6029.792262 seconds, bootstrap likelihood -1255907.254882, best rearrangement setting 5
+Bootstrap[12]: Time 11006.461957 seconds, bootstrap likelihood -1195154.461403, best rearrangement setting 8
+Bootstrap[13]: Time 9049.756870 seconds, bootstrap likelihood -1192265.832487, best rearrangement setting 7
+Bootstrap[14]: Time 19747.370515 seconds, bootstrap likelihood -1180751.302446, best rearrangement setting 12
+Bootstrap[15]: Time 25539.669258 seconds, bootstrap likelihood -1164393.950855, best rearrangement setting 15
