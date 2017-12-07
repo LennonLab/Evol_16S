@@ -79,6 +79,7 @@ def no_euks():
     OUT.close()
 
 
+# ./configure --enable-macosx-installer --enable-universal-binary --without-perl --disable-openmp
 
 
 #rename_fasta()
