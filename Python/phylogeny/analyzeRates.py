@@ -6,6 +6,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.grid_search import GridSearchCV
 from sklearn.neighbors import KernelDensity
 import  matplotlib.pyplot as plt
+from Bio import SeqIO
+
 
 mydir = os.path.expanduser("~/github/Evol_16S/")
 
@@ -26,7 +28,39 @@ def CV_KDE(oneD_array, expand = 1000):
     return return_tuple
 
 
-def makePlot():
+def make_size_plot():
+    IN_path = mydir + 'data/phylogeny/HYPHYMP/nmicrobiol201648-s7_clean_noEuks.txt'
+    lengths = []
+    for record in SeqIO.parse(IN_path, "fasta"):
+        new_seq = str(record.seq).replace("-", "")
+        lengths.append(len(new_seq))
+
+    fig, ax = plt.subplots()
+
+    # the histogram of the data
+    num_bins = 50
+    n, bins, patches = ax.hist(lengths, num_bins, normed=1)
+
+    # add a 'best fit' line
+    #y = mlab.normpdf(bins, mu, sigma)
+    #ax.plot(bins, y, '--')
+    ax.set_xlabel('Length (bp)')
+    ax.set_ylabel('Probability density')
+    #ax.set_title(r'Histogram of IQ: $\mu=100$, $\sigma=15$')
+
+    # Tweak spacing to prevent clipping of ylabel
+    fig.tight_layout()
+    output =  mydir + 'figs/size_16S.png'
+    fig.tight_layout()
+    plt.savefig(output, bbox_inches = "tight", pad_inches = 0.4, dpi = 600)
+    plt.close()
+
+    print(np.mean(lengths))
+    print(np.std(lengths))
+
+
+
+def make_rate_plot():
     df = pd.read_csv(mydir + 'data/phylogeny/HYPHYMP/out_clean.txt', sep = '\t')
     values = np.sort(df.Rate.values)
     getKDE = CV_KDE(values)
@@ -47,4 +81,4 @@ def makePlot():
     plt.savefig(output, bbox_inches = "tight", pad_inches = 0.4, dpi = 600)
     plt.close()
 
-makePlot()
+make_size_plot()
