@@ -70,17 +70,28 @@ def get_nuc_freqs(seq_length = 1670):
         for i, site in enumerate(record.seq, 1):
             if (i in sites) and (site != '-') and (site in nucs):
                 nuc_dict[i][site] += 1
-        #print(record.id)
-        #print(record.seq)
     nuc_df = pd.DataFrame(nuc_dict).T
     nuc_df.loc[:,:] = nuc_df.loc[:,:].div(nuc_df.sum(axis=1), axis=0)
     out_path = mydir + 'data/phylogeny/HYPHYMP/site_specific_nucs.txt'
-    nuc_df.to_csv(out_path, sep = '\t')
+    nuc_df['Site'] = nuc_df.index
+    nuc_df.to_csv(out_path, sep = '\t', index = False)
 
 
-def mergeeeee():
+
+def merge_dfs():
     #merge site specific rates and nuc freqs , make sure they match up
+    freqs_path = mydir + 'data/phylogeny/HYPHYMP/site_specific_nucs.txt'
+    freqs = pd.read_csv(freqs_path, sep = '\t')
+    rates_path = mydir + 'data/phylogeny/HYPHYMP/out_clean.txt'
+    rates = pd.read_csv(rates_path, sep = '\t')
+    merged = rates.merge(freqs, on =  'Site', how='outer')
+    merged_clean = merged.loc[~(merged['CI_025'] == 0.0) & ~(merged['CI_975'] >= 4600)]
+    out_path = mydir + 'data/phylogeny/HYPHYMP/rates_freqs.txt'
+    merged_clean.to_csv(out_path, sep = '\t', index = False)
+
+
 
 #get_rates()
 #clean_out()
-get_nuc_freqs()
+#get_nuc_freqs()
+#merge_dfs()
